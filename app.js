@@ -28,7 +28,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-mongoose.connect("mongodb+srv://admin-ujjwal:Ujjwal0508@cluster0-mfnvy.mongodb.net/blogDB2", {
+mongoose.connect("mongodb+srv://admin-ujjwal:<password>@cluster0-mfnvy.mongodb.net/blogDB2", {
   useNewUrlParser: true
 });
 mongoose.set("useCreateIndex", true);
