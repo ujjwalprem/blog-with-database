@@ -1,0 +1,40 @@
+
+<%- include("partials/header"); -%>
+
+<div class="register" style="float:right;">
+  <a href="/register" class="btn btn-outline-secondary " role="button" aria-pressed="true">Register</a>
+<a href="/login" class="btn btn-outline-secondary " role="button" aria-pressed="true">Login</a>
+
+</div>
+<div class="container-home">
+
+
+<div class="home">
+  <div class="card mb-3">
+  <img src="\css\bloggg.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h1 class="card-title">Home</h1>
+    <p class="card-text"><%= startingContent %></p>
+    <p class="card-text"><small class="text-muted">Greetings from Developer.</small></p>
+  </div>
+</div>
+</div>
+
+
+
+  <%  posts.forEach(function(post){ %>
+    <div class="card">
+      <div class="card-header">
+      <h2><%=post.title%></h2>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p><%=post.content%> </p>
+          <footer class="blockquote-footer">JOURNAL by <%= post.name%> </footer>
+        </blockquote>
+      </div>
+    </div>
+    <% }) %>
+</div>
+
+<%- include("partials/footer"); -%>
